@@ -10,8 +10,8 @@ month = gets.chomp.to_i
 print "Год: "
 year = gets.chomp.to_i
 
-day_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-day_in_month[1] = 29 if year % 400 == 0 || ( year % 4 == 0 && year % 100 != 0 )
+day_in_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+day_in_month[2] = 29 if year % 400 == 0 || ( year % 4 == 0 && year % 100 != 0 )
 
 days_count = day_in_month[0...month].sum + day
 puts "Это #{days_count} день по счету с начала года."

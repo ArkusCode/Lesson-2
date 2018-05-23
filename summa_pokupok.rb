@@ -1,6 +1,5 @@
 # Сумма покупок
 cart = {}
-sum = 0
 
 loop do 
   print "Введите наименование товара или стоп для завершения: "
@@ -20,6 +19,8 @@ end
 
 puts " "
 puts cart
+
+sum = 0
 
 cart.each do |merch, value| 
   interm = value[:price] * value[:count]
